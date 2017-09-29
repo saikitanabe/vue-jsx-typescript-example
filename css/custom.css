@@ -1,0 +1,54 @@
+a {
+  color: #bc223f;
+}
+.container p a {
+  border-bottom: 0.2rem solid #bc223f;
+}
+.container p a:hover {
+  border-color: #606c76;
+}
+
+.button {
+  background-color: #e94675;
+  border: 0.1rem solid #e94675;
+}
+
+.button.button-outline {
+  color: #e94675;
+}
+
+input[type='email']:focus,
+input[type='number']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='text']:focus,
+input[type='url']:focus,
+textarea:focus,
+select:focus {
+  border-color: #e94675;
+}
+
+.red {
+  color: #e94675;
+}
+
+a.sketchboard {
+  color: #333;
+  border-bottom: none !important;
+  /* font-family: Bariol, 'Roboto Slab', Helvetica Neue,Arial,sans-serif; */
+}
+a.sketchboard:hover {
+  border-bottom: 0.2rem solid #bc223f;
+}
+/* a.sketchboard small {
+  font-size: 90%;
+} */
+
+pre {
+  border-left: 0.3rem solid #6bc1bd;
+}
+
+.underline {
+  border-bottom: 0.2rem solid #6bc1bd;
+}

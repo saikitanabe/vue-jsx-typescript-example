@@ -1,0 +1,39 @@
+{
+  "name": "vue-test-component",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "rm -rf ./dist/* && cp Config-dev.ts Config.ts && webpack --watch",
+    "prod": "rm -rf ./dist/* && cp Config-prod.ts Config.ts && NODE_ENV=production webpack -p --config webpack.config-prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sketchboard",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "awesome-typescript-loader": "^3.2.3",
+    "babel-core": "^6.26.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.4.3",
+    "babel-preset-env": "^1.6.0",
+    "css-loader": "^0.28.5",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
+    "source-map-loader": "^0.2.1",
+    "style-loader": "^0.18.2",
+    "typescript": "^2.4.2",
+    "vue-class-component": "^5.0.2",
+    "vue-loader": "^13.0.4",
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^3.5.4"
+  },
+  "dependencies": {
+    "milligram": "^1.3.0",
+    "vue": "^2.4.2",
+    "vue-property-decorator": "^5.2.1",
+    "vue-router": "^2.7.0",
+    "vuex": "^2.3.1"
+  }
+}

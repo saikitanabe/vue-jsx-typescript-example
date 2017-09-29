@@ -1,0 +1,52 @@
+.header {
+  background-color: #f4f5f6;
+  padding-top: 1rem
+}
+
+@media (min-width: 40rem) {
+  .header {
+    padding-top:5rem
+  }
+}
+
+.header+section {
+  border-top: 0
+}
+
+.header .container {
+  border-top: 0;
+  padding-bottom: 7.5rem;
+  padding-top: 7.5rem;
+  position: relative;
+  text-align: center
+}
+
+.header .title {
+  font-family: Gotham Rounded A,Gotham Rounded B,Helvetica Neue,Arial,sans-serif
+}
+
+.header .img {
+  height: 15rem;
+  margin-bottom: 2rem
+}
+
+.header .img path {
+  animation: 7s a forwards;
+  fill: #9b4dca;
+  stroke: #9b4dca;
+  stroke-dasharray: 38321;
+  stroke-miterlimit: 10;
+  stroke-width: 15px
+}
+
+.header .button {
+  margin-bottom: 4rem;
+  margin-top: 2rem
+}
+
+@media (min-width: 40rem) {
+  .header .button {
+    margin-bottom:4rem;
+    margin-top: 2rem
+  }
+}

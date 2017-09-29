@@ -1,0 +1,15 @@
+import Vue from 'vue'
+import Component from 'vue-class-component'
+
+@Component
+export default class Ex extends Vue {
+  render() {
+    return (
+      <pre class="chroma code prettyprint prettyprinted">
+        <code class='code-content'>
+          {{ .Content }}
+        </code>
+      </pre>
+    )
+  }
+}
