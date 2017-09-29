@@ -1,5 +1,5 @@
 examples:
-	make -C tools all
+	make -C tools/html2vuejsx all
 
 dev:
 	make -C tools/deployment dev
@@ -11,3 +11,5 @@ prod:
 	rm -f prod.tar.gz
 	rm dist/*.map
 	tar zcvf prod.tar.gz index.html dist static
+
+.PHONY: examples
