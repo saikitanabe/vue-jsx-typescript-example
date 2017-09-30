@@ -12,13 +12,19 @@ import (
 )
 
 const (
-	tmplFile = "index-tmpl.html"
+	tmplFile          = "index-tmpl.html"
+	tmplAnalyticsHTML = "analytics.html"
 )
 
 var (
 	devFlag  = flag.Bool("dev", false, "Generate development index.html")
 	prodFlag = flag.Bool("prod", false, "Generate production index.html")
 	prefix   = flag.String("prefix", "dist", "Prefix where JavaScript file are loaded. Could be e.g. through CDN")
+
+	templates = []string{
+		filepath.Join("tmpl", tmplFile),
+		filepath.Join("tmpl", tmplAnalyticsHTML),
+	}
 )
 
 func main() {
@@ -31,7 +37,7 @@ func main() {
 
 	t, err := template.
 		New(tmplFile).
-		ParseFiles(tmplFile)
+		ParseFiles(templates...)
 	if err != nil {
 		log.Fatalln(err)
 		return
@@ -51,17 +57,21 @@ func main() {
 	fmt.Println(indexHTML)
 }
 
-func resolveData(path string) (interface{}, error) {
+type IndexHTMLData struct {
+	ManifestJS  string
+	VueVendorJS string
+	AppJS       string
+	Analytics   bool
+}
+
+func resolveData(path string) (*IndexHTMLData, error) {
 	switch {
 	case *devFlag:
-		return struct {
-			ManifestJS  string
-			VueVendorJS string
-			AppJS       string
-		}{
+		return &IndexHTMLData{
 			ManifestJS:  fmt.Sprintf("%s/manifest.js", *prefix),
 			VueVendorJS: fmt.Sprintf("%s/vuevendor.js", *prefix),
 			AppJS:       fmt.Sprintf("%s/app.js", *prefix),
+			Analytics:   false,
 		}, nil
 	case *prodFlag:
 		return resolveProdData(path)
@@ -70,7 +80,7 @@ func resolveData(path string) (interface{}, error) {
 	}
 }
 
-func resolveProdData(path string) (interface{}, error) {
+func resolveProdData(path string) (*IndexHTMLData, error) {
 
 	manifestJS, err := findLatest(path, regexp.MustCompile(`^\S+-manifest\.js$`))
 	if err != nil {
@@ -85,14 +95,11 @@ func resolveProdData(path string) (interface{}, error) {
 		return nil, err
 	}
 
-	return struct {
-		ManifestJS  string
-		VueVendorJS string
-		AppJS       string
-	}{
+	return &IndexHTMLData{
 		ManifestJS:  filepath.Join(*prefix, manifestJS),
 		VueVendorJS: filepath.Join(*prefix, vuevendorJS),
 		AppJS:       filepath.Join(*prefix, appJS),
+		Analytics:   true,
 	}, nil
 }
 
