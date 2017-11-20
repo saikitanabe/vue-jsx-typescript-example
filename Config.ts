@@ -1,11 +1,11 @@
 export default class Config {
   static rootPathName(): string {
-    return ''
+    return '/vue-jsx-typescript-example'
   }
   static rootPath(): string {
-    return `/`
+    return `${Config.rootPathName()}/`
   }
   static publicPath(): string {
-    return `/dist/`
+    return `${Config.rootPathName()}/dist/`
   }
 }
