@@ -44,7 +44,7 @@ export default class LoadComponentDynamicallyExample extends VueComponent<FirstP
           TypeScript syntax to load components dynamically:
         </p>
 
-        <Block>const Component = () => './Component'</Block>
+        <Block>const Component = () ={'>'} './Component'</Block>
 
         <ExRouter />
 
