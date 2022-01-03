@@ -3,6 +3,5 @@ node_modules/*
 dist
 *.map
 tools/deployment/deployment
-tools/deployment/tmpl/analytics.html
 tools/html2vuejsx/html2vuejsx
 tools/html2vuejsx/ex/*.html
