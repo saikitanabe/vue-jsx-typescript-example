@@ -7,7 +7,7 @@ export default class Ex extends Vue {
     return (
       <pre class="chroma code prettyprint prettyprinted">
         <code class='code-content'>
-          <span class="s3e8">import</span><span class="s1f40"> </span><span class="s7df">Vue</span><span class="s1f40"> </span><span class="s7df">from</span><span class="s1f40"> </span><span class="sc1c">&#39;vue&#39;</span><span class="s1f40">{"\n"}</span><span class="s1f40">{"\n"}</span><span class="s1f40"></span><span class="s3e8">export</span><span class="s1f40"> </span><span class="s3e8">class</span><span class="s1f40"> </span><span class="s7df">VueComponent</span><span class="sfa0">&lt;</span><span class="s7df">P</span><span class="sfa0">&gt;</span><span class="s1f40"> </span><span class="s3e8">extends</span><span class="s1f40"> </span><span class="s7df">Vue</span><span class="s1f40"> </span><span class="s1388">{"{"}</span><span class="s1f40">{"\n"}</span><span class="s1f40">{"  "}</span><span class="s7df">$props</span><span class="s1f40">: </span><span class="s3e8">P</span><span class="s1f40">{"\n"}</span><span class="s1f40"></span><span class="s1388">{"}"}</span><span class="s1f40">{"\n"}</span><span class="s1f40"></span>
+          <span class="kr">import</span> <span class="nx">Vue</span> <span class="kr">from</span> <span class="s1">&#39;vue&#39;</span>{"\n"}{"\n"}<span class="kr">export</span> <span class="kr">class</span> <span class="nx">VueComponent</span><span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span> <span class="kr">extends</span> <span class="nx">Vue</span> <span class="p">{"{"}</span>{"\n"}{"  "}<span class="nx">$props</span>: <span class="kt">P</span>{"\n"}<span class="p">{"}"}</span>{"\n"}
         </code>
       </pre>
     )
