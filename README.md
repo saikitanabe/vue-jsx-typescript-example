@@ -13,7 +13,7 @@ npm install
 ## DEV run the application
 
 ```
-npm run dev
+make dev
 ```
 
 Run webserver in index.html folder. Found in ~/Documents/sources/go/src/sketchboard.io/gotools

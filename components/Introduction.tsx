@@ -6,6 +6,11 @@ import { Examples } from './Examples'
 
 @Component
 export class Introduction extends Vue {
+
+  mounted() {
+    window.document.title = "Vue.js, JSX and TypeScript Example"
+  }
+
   render() {
     return <div>
       <h2>Introduction</h2>

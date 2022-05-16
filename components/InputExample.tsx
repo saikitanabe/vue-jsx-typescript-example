@@ -43,6 +43,7 @@ export default class InputExample extends Vue {
 
   mounted() {
     this.getInputField().select()
+    window.document.title = "Example: Input Field Updates Component State"
   }
 
   private getInputField() {

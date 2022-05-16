@@ -12,7 +12,11 @@ export default class TypeCheckJSXProperties extends Vue {
   msg: string = ''
 
   mounted() {
-    this.getInputField().focus()
+    window.document.title = "Example: Type Check JSX Component Properties"
+
+    if (this.getInputField()) {
+      this.getInputField().focus()
+    }
   }
 
   private getInputField() {

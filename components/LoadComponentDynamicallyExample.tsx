@@ -27,6 +27,11 @@ interface FirstPageProps {
 
 @Component
 export default class LoadComponentDynamicallyExample extends VueComponent<FirstPageProps> {
+
+  mounted() {
+    window.document.title = "Example: Load Vue Components Dynamically"
+  }
+
   render() {
     return (
       <div>
