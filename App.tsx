@@ -28,7 +28,7 @@ export default class App extends Vue {
 
         <Jumbotron />
 
-        <section class='container' id='get-started'>
+        <section class='container'>
 
           <router-view></router-view>
 

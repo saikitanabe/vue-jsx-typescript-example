@@ -8,6 +8,7 @@ import ExRouter from '../examples/router'
 import ExWebpackConfig from '../examples/webpack-config-js'
 import ExTsConfig from '../examples/tsconfig-json'
 import ExBabelConfig from '../examples/babelrc'
+import Config from '../Config'
 
 
 @Component
@@ -15,7 +16,7 @@ class Structure extends Vue {
   render() {
     return (
       <div>
-        <img src='static/structure.svg' />
+        <img src={`${Config.rootPathName()}/static/structure.svg`} />
       </div>
     )
   }

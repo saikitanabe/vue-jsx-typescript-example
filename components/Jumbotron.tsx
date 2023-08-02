@@ -21,7 +21,8 @@ export class Jumbotron extends Vue {
                 >sketch</span>board.io</small></A>
             </i>
           </p>
-          <a class="button" href={`${Config.rootPathName()}/#get-started`} title="Getting Started">To examples</a>
+          {/* <a class="button" href={`${Config.rootPathName()}/#get-started`} title="Getting Started">To examples</a> */}
+          {/* <router-link class='button' to={Config.rootPath()}>← To examples</router-link> */}
        </section>
       </header>
     )

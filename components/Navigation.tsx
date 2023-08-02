@@ -93,7 +93,7 @@ export class Navigation extends Vue {
             className="navigation-title"
             href="https://sketchboard.io"
             targetBlank={true}>
-            <img src='static/logo_sketchboard.png' class='img' />
+            <img src={`${Config.rootPathName()}/static/logo_sketchboard.png`} class='img' />
             <div class="title"><span class='red'>sketch</span>board</div>
           </A>
           <ul class="navigation-list float-right">
@@ -101,25 +101,29 @@ export class Navigation extends Vue {
               <NavigationPopover
                 links={[
                   {
-                    href: `${Config.rootPathName()}/#get-started`,
+                    // href: `${Config.rootPathName()}/#get-started`,
+                    href: `/#get-started`,
                     title: "To Examples",
                     value: 'To Examples',
                     targetBlank: false
                   },
                   {
-                    href: `${Config.rootPathName()}/input-update`,
+                    // href: `${Config.rootPathName()}/input-update`,
+                    href: `/input-update`,
                     title: "Input Field Updates Component State",
                     value: 'Input Field Updates Component State',
                     targetBlank: false
                   },
                   {
-                    href: `${Config.rootPathName()}/load-component-dynamically`,
+                    // href: `${Config.rootPathName()}/load-component-dynamically`,
+                    href: `/load-component-dynamically`,
                     title: "Load Vue Components Dynamically",
                     value: 'Load Vue Components Dynamically',
                     targetBlank: false
                   },
                   {
-                    href: `${Config.rootPathName()}/type-check-jsx-properties`,
+                    // href: `${Config.rootPathName()}/type-check-jsx-properties`,
+                    href: `/type-check-jsx-properties`,
                     title: "Type Check JSX Component Properties",
                     value: 'Type Check JSX Component Properties',
                     targetBlank: false

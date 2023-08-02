@@ -11,7 +11,8 @@ export class BackToRoot extends VueComponent<BackToRootProps> {
   render() {
     return (
       <div>
-        <router-link to={Config.rootPath()}>← To examples</router-link>
+        {/* <router-link to={Config.rootPath()}>← To examples</router-link> */}
+        <router-link to='/'>← To examples</router-link>
       </div>
     )
   }

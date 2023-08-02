@@ -5,4 +5,4 @@ dev: build
 	./deployment --dev --prefix dist ../../dist > ../../index.html
 
 prod: build
-	./deployment --prod --prefix dist ../../dist > ../../index.html
+	./deployment --prod --prefix /vue-jsx-typescript-example/dist ../../dist > ../../index.html

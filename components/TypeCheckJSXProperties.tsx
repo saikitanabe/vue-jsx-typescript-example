@@ -6,6 +6,7 @@ import {BackToRoot} from './BackToRoot'
 
 import ExVueTsComponent from '../examples/vue-ts-component-ts'
 import ExComponentProps from '../examples/component-props'
+import Config from '../Config'
 
 @Component
 export default class TypeCheckJSXProperties extends Vue {
@@ -55,7 +56,7 @@ export default class TypeCheckJSXProperties extends Vue {
         </pre>
 
         <div>
-          <img src='static/component-properties-check.png' />
+          <img src={`${Config.rootPathName()}/static/component-properties-check.png`} />
         </div>
 
         <BackToRoot />       
